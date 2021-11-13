@@ -32,6 +32,14 @@ pipeline {
 
 	}
 
+	stage('ng Build') {
+             steps{
+               script{
+                    sh "sudo ng build"
+                }
+            }
+        }
+
 
 
 

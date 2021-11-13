@@ -14,24 +14,24 @@ pipeline {
             }
         }
         
-	stage('Install') {
-           steps{
-              script{
-                   sh "sudo npm install"
+	   	stage('Install') {
+             steps{
+                script{
+                    sh "sudo npm install"
                 }
             }
         }
 
 	stage ('Build') {
-	     steps {
-	 	 script{
+	
+			steps {
+			
 			sh "ansible-playbook ansible/build.yml -i ansible/inventory/host.yml"
 	
 			}
-		    }
+
 
 	}
-
 	stage('ng Build') {
              steps{
                script{

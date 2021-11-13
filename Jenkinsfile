@@ -32,13 +32,13 @@ pipeline {
 
 
 	}
-	stage('ng Build') {
-             steps{
-               script{
-                    sh "sudo ng build"
-                }
-            }
-        }
+	//stage('ng Build') {
+       //      steps{
+          //     script{
+           //         sh "sudo ng build"
+           //     }
+           // }
+     //   }
 
 
 	stage('Docker') {
